@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+        
+</head>
+
+<script src="openLight.js"></script>
+<html>
+    <body class="lightDarkB light">
+        <div>
+            <h2 class="title">ABOUT US</h2>
+            <h3 class="override">This is the story behind Kabuki Strength</h3>
+            <p>
+                We are a group of passionate amateur-to-elite level lifters, strength athletes, and coaches with a shared goal in bettering ourselves and growing in every facet of life. Our gym is a “laboratory” where we test cutting edge equipment and methodologies before sharing them with the rest of the world via our platform. We are welcome to anyone, as long as they share the passion of self-improvement and physical training that guides and shapes our lives, minds, and bodies. Here at Kabuki Strength, we coach our clients based on a lot individual factors like range of motion, past injuries, nutrition habits etc. to keep them motivated in their journey towards achieving their dream physical conditioning.
+            </p>
+            <center> 
+                <img src="client.jpg" height="450px" width="650px"> 
+            </center>
+
+            <br>
+
+            <center>
+                <button id="toggler" onclick="openLight.toggleMode();">TOGGLE</button>
+            </center>
+        </div>
+    </body>
+    
+    <style>
+        /*some extra styles*/
+        @font-face {
+            /* font from https://fonts.google.com/specimen/Roboto+Mono */
+            font-family: "RobotoMono";
+            src: url("Roboto_Mono/RobotoMono-Thin.ttf");
+        }
+
+        p {
+            font-family: RobotoMono;
+            font-weight: bold;
+            text-align: justify;
+        }
+
+        h1 {
+            font-family: RobotoMono;
+            font-weight: bold;
+        }
+
+        button {
+            font-family: RobotoMono;
+            font-weight: bold;
+            font-size:13px;
+        }
+
+        div {
+            margin-left:20px;
+            margin-top:20px;
+        }
+
+        .override {
+            color:rgb(240,70,100);
+            font-family: RobotoMono;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .title{
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+        //Create OpenLight object
+        openLight = new OpenLight("auto");
+
+        //use openLight.addBackgroundTag("some tag") to use currently unsupported tags
+
+        //Adds override to the list of classes that shouldn't use dark mode
+        openLight.addOverrideByClassName("override");
+        
+        //Changing the default colors
+        openLight.openLightColors = {
+            darkBackgroundStyle: "rgb(30,30,38)",
+            lightBackgroundStyle: "rgb(255,255,255)",
+            darkForegroundStyle: "rgb(240,240,250)",
+            lightForegroundStyle: "rgb(30,30,40)"
+        }
+
+        //Initialize after settings are set
+        openLight.init();
+    </script>
+</html>
